@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;width:512px;height:512px;overflow:hidden;background:transparent}
+.icon{width:512px;height:512px;display:grid;place-items:center;background:#111;color:#fcfcfb;font-family:'Geist',sans-serif;font-weight:600;font-size:368px;letter-spacing:-.04em;line-height:1}
+.icon span{transform:translate(4px,-30px)}
+.icon i{font-style:normal;color:#8a8a8a}
+body:not(.square) .icon{border-radius:112px}
+</style>
+</head>
+<body>
+<div class="icon"><span>e<i>.</i></span></div>
+<script>if(location.hash==='#square')document.body.classList.add('square')</script>
+</body>
+</html>
