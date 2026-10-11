@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<title>Eren Bekman</title>
+<meta name="description" content="Full Stack Developer and Co-Founder building SaaS platforms and mobile apps with Node.js, Laravel and Vue/Nuxt.">
+<link rel="canonical" href="https://erenbekman.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://erenbekman.com/">
+<meta property="og:title" content="Eren Bekman">
+<meta property="og:description" content="Full Stack Developer and Co-Founder building SaaS platforms and mobile apps with Node.js, Laravel and Vue/Nuxt.">
+<meta property="og:image" content="https://erenbekman.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@erenbekman">
+<script>
+function applyTheme(theme) {
+  var root = document.documentElement;
+  if (theme) root.dataset.theme = theme; else delete root.dataset.theme;
+  document.querySelectorAll('meta[name=theme-color]').forEach(function (m) {
+    var dark = theme ? theme === 'dark' : m.media.indexOf('dark') !== -1;
+    m.content = dark ? '#111110' : '#fcfcfb';
+  });
+}
+try { var stored = localStorage.getItem('theme'); if (stored === 'light' || stored === 'dark') applyTheme(stored); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{color-scheme:light}
+:root{--bg:#fcfcfb;--fg:#111;--text:#333;--muted:#6b6b6b;--subtle:#8a8a8a;--hover:#9a9a9a;--line:#ececec;--underline:#ccc;--underline-hover:#ddd}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#111110;--fg:#ededec;--text:#c9c9c7;--muted:#9b9b99;--subtle:#7f7f7d;--hover:#6f6f6d;--line:#262625;--underline:#4a4a48;--underline-hover:#353534}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#111110;--fg:#ededec;--text:#c9c9c7;--muted:#9b9b99;--subtle:#7f7f7d;--hover:#6f6f6d;--line:#262625;--underline:#4a4a48;--underline-hover:#353534}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--fg);text-decoration:underline;text-decoration-color:var(--underline);text-underline-offset:3px}
+a:hover{color:var(--hover);text-decoration-color:var(--underline-hover)}
+main{max-width:600px;margin:0 auto;padding:112px 24px 72px;box-sizing:border-box;font-size:15px;line-height:1.7;display:flex;flex-direction:column;gap:72px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;line-height:1.4}
+header>div{display:flex;flex-direction:column}
+header .name{font-weight:500}
+header .role{color:var(--muted)}
+.intro{display:flex;flex-direction:column;gap:14px}
+.intro p{margin:0;color:var(--text);text-wrap:pretty}
+.list{display:flex;flex-direction:column}
+.list h2{margin:0;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:15px;font-weight:400;color:var(--subtle)}
+.group{display:grid;grid-template-columns:100px minmax(0,1fr);border-bottom:1px solid var(--line)}
+.group .year{padding:10px 0;color:var(--muted)}
+.group .items{display:flex;flex-direction:column}
+.group .items>*+*{border-top:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;color:var(--fg);text-decoration:none}
+a.row:hover,.row .meta a:hover{color:var(--hover)}
+.row .meta{text-align:right}
+.row .meta a{color:inherit;text-decoration:none;white-space:nowrap}
+.row .sep{color:var(--hover)}
+.theme-toggle{display:grid;place-items:center;width:32px;height:32px;margin:-4px -6px 0 0;padding:0;border:0;border-radius:8px;background:none;color:var(--muted);cursor:pointer}
+.theme-toggle:hover{color:var(--fg);background:var(--line)}
+.theme-toggle:focus-visible{outline:2px solid var(--subtle);outline-offset:2px}
+.theme-toggle .sun{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .theme-toggle .sun{display:block}:root:not([data-theme=light]) .theme-toggle .moon{display:none}}
+:root[data-theme=dark] .theme-toggle .sun{display:block}
+:root[data-theme=dark] .theme-toggle .moon{display:none}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <span class="name">Eren Bekman</span>
+      <span class="role">Full Stack Developer</span>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </header>
+
+  <section class="intro">
+    <p>Full Stack Developer and Co-Founder with 5+ years of experience building SaaS platforms and mobile apps with Node.js, Laravel and Vue/Nuxt. Currently building the backend for <a href="https://ustad.co/" target="_blank" rel="noopener">Ustad</a>, working on fintech and e‑invoice automation.</p>
+    <p>You can find me on <a href="https://x.com/erenbekman" target="_blank" rel="noopener">X</a>, <a href="https://github.com/erenbekman" target="_blank" rel="noopener">GitHub</a> and <a href="https://linkedin.com/in/erenbekman" target="_blank" rel="noopener">LinkedIn</a>, reach me via <a href="mailto:erenbekman@gmail.com">email</a>, or grab my <a href="Eren-Bekman-CV.pdf" download>CV</a>.</p>
+  </section>
+
+  <section class="list">
+    <h2>Projects</h2>
+    <div class="group">
+      <span class="year">2026</span>
+      <div class="items">
+        <a class="row" href="https://subbrook.com/" target="_blank" rel="noopener"><span>Subbrook</span><span class="meta">subbrook.com&nbsp;↗</span></a>
+        <a class="row" href="https://github.com/erenbekman/harbor" target="_blank" rel="noopener"><span>Harbor</span><span class="meta">github.com&nbsp;↗</span></a>
+        <div class="row"><span>Upkept</span><span class="meta"><a href="https://up-kept.app/" target="_blank" rel="noopener">up-kept.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/upkept/id6794236887" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
+        <a class="row" href="https://apps.apple.com/us/app/expense-follower/id6761009175" target="_blank" rel="noopener"><span>Expense Follower</span><span class="meta">App Store&nbsp;↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <span class="year">2025</span>
+      <div class="items">
+        <a class="row" href="https://ustad.co/" target="_blank" rel="noopener"><span>Ustad</span><span class="meta">ustad.co&nbsp;↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <span class="year">2023</span>
+      <div class="items">
+        <div class="row"><span>Nott</span><span class="meta"><a href="https://nott.app/" target="_blank" rel="noopener">nott.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/nott-app/id6449980598" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
+      </div>
+    </div>
+    <div class="group">
+      <span class="year">2021</span>
+      <div class="items">
+        <a class="row" href="https://www.bluestacks.com/apps/educational/hexa-network-on-pc.html" target="_blank" rel="noopener"><span>Hexa Network</span><span class="meta">bluestacks.com&nbsp;↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="list">
+    <h2>Experience</h2>
+    <div class="group">
+      <span class="year">2025–Now</span>
+      <div class="items">
+        <div class="row"><span>Backend Developer</span><span class="meta">Ustad</span></div>
+      </div>
+    </div>
+    <div class="group">
+      <span class="year">2023–2025</span>
+      <div class="items">
+        <div class="row"><span>Co-Founder &amp; Full Stack Developer</span><span class="meta">Nott</span></div>
+      </div>
+    </div>
+    <div class="group">
+      <span class="year">2021–2023</span>
+      <div class="items">
+        <div class="row"><span>Full Stack Developer</span><span class="meta">Lemoon&nbsp;Games</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Last updated · Oct 12, 2026</span>
+    <span>© 2026 Eren Bekman</span>
+  </footer>
+</main>
+<script>
+document.querySelector('.theme-toggle').addEventListener('click', function () {
+  var root = document.documentElement;
+  var systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  var current = root.dataset.theme || (systemDark ? 'dark' : 'light');
+  var next = current === 'dark' ? 'light' : 'dark';
+  var followsSystem = next === (systemDark ? 'dark' : 'light');
+  applyTheme(followsSystem ? null : next);
+  try { followsSystem ? localStorage.removeItem('theme') : localStorage.setItem('theme', next); } catch (e) {}
+});
+</script>
+</body>
+</html>

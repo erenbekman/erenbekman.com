@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Eren Bekman — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:16mm 18mm}
+body{margin:0;background:#fff;color:#111;font-family:'Geist',system-ui,sans-serif;font-size:9.5pt;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding-bottom:14px;border-bottom:1px solid #e4e4e4}
+header .name{font-size:15pt;font-weight:500;line-height:1.2}
+header .role{color:#6b6b6b}
+header .contact{text-align:right;color:#444;line-height:1.6}
+section{margin-top:18px}
+h2{margin:0 0 8px;font-size:9.5pt;font-weight:400;color:#8a8a8a;text-transform:uppercase;letter-spacing:.06em}
+p{margin:0 0 6px;color:#333;text-wrap:pretty}
+.entry{margin-bottom:14px;break-inside:avoid-page}
+.entry:last-child{margin-bottom:0}
+.entry-head{display:flex;justify-content:space-between;gap:16px;margin-bottom:4px}
+.entry-head .title{font-weight:500}
+.entry-head .org{color:#6b6b6b}
+.entry-head .date{color:#6b6b6b;white-space:nowrap}
+ul{margin:4px 0 0;padding-left:14px;color:#333}
+li{margin-bottom:3px;padding-left:2px}
+li b{font-weight:500;color:#111}
+.stack{margin-top:6px;color:#6b6b6b}
+.stack b{font-weight:500;color:#111}
+.rows{display:flex;flex-direction:column}
+.rows>div{display:flex;justify-content:space-between;gap:16px;padding:5px 0;border-top:1px solid #eee}
+.rows>div:last-child{border-bottom:1px solid #eee}
+.rows .muted{color:#6b6b6b;white-space:nowrap}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.skills{color:#333}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="name">Eren Bekman</div>
+    <div class="role">Full Stack Developer · Istanbul, TR</div>
+  </div>
+  <div class="contact">
+    <a href="mailto:erenbekman@gmail.com">erenbekman@gmail.com</a><br>
+    <a href="https://linkedin.com/in/erenbekman">linkedin.com/in/erenbekman</a> · <a href="https://x.com/erenbekman">x.com/erenbekman</a><br>
+    <a href="https://github.com/erenbekman">github.com/erenbekman</a>
+  </div>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>Full Stack Developer and Co-Founder with 5+ years of experience building SaaS platforms and mobile applications. I work with Node.js and PHP Laravel for backend development, and Vue.js/Nuxt.js for creating user-friendly frontend experiences.</p>
+  <p>My technical experience covers the development lifecycle from system design and database work (MySQL, MongoDB) to deployment and infrastructure management using Docker, CI/CD pipelines, and cloud services. I have worked on financial integrations, real-time communication features, and applications serving multiple concurrent users.</p>
+  <p>Currently working on fintech and e-invoice automation solutions, I have gained experience with government system integrations, payment processing, and compliance requirements. I'm interested in emerging technologies like blockchain, Web3, and artificial intelligence, and enjoy exploring how these can be applied to solve practical business problems.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head"><span><span class="title">Backend Developer</span> <span class="org">· Ustad</span></span><span class="date">2025 – Present</span></div>
+    <p>Architected and developed the backend infrastructure for a comprehensive SaaS e-invoice and financial automation platform, building a scalable, secure, and integration-heavy system handling complex financial workflows and multi-party government and third-party services.</p>
+    <ul>
+      <li><b>System Architecture:</b> Designed a modular backend architecture with clear separation of concerns, applying repository patterns and domain-driven design principles to ensure long-term maintainability and scalability.</li>
+      <li><b>Government &amp; Financial Integrations:</b> Implemented robust bi-directional integrations with critical financial systems including GİB (Turkish Revenue Administration), eLogo, Paraşüt, Uyumsoft, and other accounting platforms, handling high-volume financial data flows.</li>
+      <li><b>Payment &amp; Subscription Systems:</b> Built end-to-end billing infrastructure including checkout, recurring subscriptions, renewals, cancellations, coupon logic, invoice state machines, TCMB currency exchange integration, and automated reconciliation processes.</li>
+      <li><b>Distributed &amp; Background Processing:</b> Designed resilient job processing pipelines using Laravel Queue &amp; Horizon for bulk notifications, PDF processing and merging, external service synchronization, retries, and failure handling.</li>
+      <li><b>Multi-Channel Communication Infrastructure:</b> Architected an event-driven notification system supporting SMS, email, Intercom, and Slack channels with intelligent routing, retry mechanisms, and delivery optimization for business-critical communications.</li>
+      <li><b>Document Management &amp; Reporting:</b> Developed scalable document and reporting systems generating large-volume Excel, CSV, and PDF exports, including financial document storage, processing, and AI-assisted analysis workflows.</li>
+      <li><b>Access Control &amp; Security:</b> Implemented multi-tenant RBAC with company-level roles, policy-based authorization, OAuth/JWT authentication (Passport/Sanctum), and comprehensive audit logging.</li>
+      <li><b>Observability &amp; Reliability:</b> Integrated Sentry, Datadog, and structured logging to enable proactive monitoring, performance analysis, and rapid production issue diagnosis.</li>
+      <li><b>DevOps &amp; Code Quality:</b> Established CI/CD pipelines with automated testing, static analysis (Larastan), and enforced code review practices to maintain high engineering standards across critical business flows.</li>
+    </ul>
+    <div class="stack"><b>Tech Stack:</b> Laravel, PHP, MySQL, Redis, AWS S3, Queue Workers, Laravel Horizon, OAuth2 (Passport), SendGrid, Sentry, Datadog, GitHub Actions, Spatie Permissions &amp; Activity Log, REST APIs</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span><span class="title">Co-Founder &amp; Full Stack Developer</span> <span class="org">· Nott</span></span><span class="date">2023 – 2025</span></div>
+    <p>Led the end-to-end conceptualization, architecture, and development of Nott App, a comprehensive mobile application serving thousands of users. Built a scalable full-stack solution using Nuxt.js for frontend development, Node.js for backend services, and integrated multiple databases (MySQL, Sequelize) and cloud services (AWS, Firebase, Redis).</p>
+    <ul>
+      <li>Successfully launched and deployed mobile applications on both Apple App Store and Google Play Store.</li>
+      <li>Implemented real-time communication features using Socket.io, enhancing user engagement.</li>
+      <li>Designed and optimized database architecture resulting in improved application performance.</li>
+      <li>Established secure, scalable backend infrastructure supporting concurrent user sessions.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span><span class="title">Full Stack Developer</span> <span class="org">· Lemoon Games</span></span><span class="date">2021 – 2023</span></div>
+    <p>Developed and maintained multiple full-stack web applications using Vue.js/Nuxt.js frontend frameworks and PHP Laravel backend with Node.js microservices. Engineered comprehensive admin dashboard solutions for Hexa Network and Ms.Astro projects, incorporating advanced data visualization and user management capabilities.</p>
+    <ul>
+      <li>Built interactive admin panels featuring real-time analytics dashboards with dynamic charts displaying daily earnings, user metrics, and transaction data.</li>
+      <li>Implemented comprehensive user management systems with advanced filtering, search, and bulk operations.</li>
+      <li>Developed in-app messaging systems, gift distribution mechanisms, and news posting functionalities.</li>
+      <li>Designed and integrated detailed analytics systems tracking user behavior and business KPIs.</li>
+      <li>Enhanced admin panel functionality through iterative user feedback, reducing error resolution time by 40% and improving overall user satisfaction.</li>
+      <li>Optimized database queries and implemented caching strategies using MongoDB and MySQL.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="entry">
+  <h2>Projects</h2>
+  <div class="rows">
+    <div><span><a href="https://subbrook.com/">Subbrook</a> <span class="muted">— local-first subscription tracker for macOS, Windows and Linux · Tauri, Vue, SQLite</span></span><span class="muted">2026</span></div>
+    <div><span><a href="https://github.com/erenbekman/harbor">Harbor</a> <span class="muted">— native macOS app that keeps every project's dev servers one click away · Swift, tmux</span></span><span class="muted">2026</span></div>
+    <div><span><a href="https://up-kept.app/">Upkept</a> <span class="muted">— calm habit tracker for web, iOS, Android and desktop · Nuxt, Capacitor, Tauri</span></span><span class="muted">2026</span></div>
+    <div><span><a href="https://apps.apple.com/us/app/expense-follower/id6761009175">Expense Follower</a> <span class="muted">— personal and shared group expense tracker, built with a friend · iOS</span></span><span class="muted">2026</span></div>
+  </div>
+</section>
+
+<section class="entry">
+  <h2>Education</h2>
+  <div class="rows">
+    <div><span>Beykent University <span class="muted">· Bachelor of Computer Engineering</span></span><span class="muted">2020 – 2023</span></div>
+    <div><span>Altınbaş University <span class="muted">· Associate Degree in Computer Programming</span></span><span class="muted">2018 – 2020</span></div>
+  </div>
+</section>
+
+<section class="grid entry">
+  <div>
+    <h2>Skills</h2>
+    <div class="skills">JavaScript, TypeScript, Vue.js, Nuxt.js, Node.js, PHP &amp; Laravel, MySQL, MongoDB, Redis, Firebase, Docker, AWS, Nginx</div>
+  </div>
+  <div>
+    <h2>Languages</h2>
+    <div class="skills">Turkish — Native<br>English — Fluent</div>
+  </div>
+</section>
+</body>
+</html>
