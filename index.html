@@ -35,7 +35,7 @@ try { var stored = localStorage.getItem('theme'); if (stored === 'light' || stor
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
 <style>
 html{color-scheme:light}
-:root{--bg:#fcfcfb;--fg:#111;--text:#333;--muted:#6b6b6b;--subtle:#8a8a8a;--hover:#9a9a9a;--line:#ececec;--underline:#ccc;--underline-hover:#ddd}
+:root{--bg:#fcfcfb;--fg:#111;--text:#333;--muted:#6b6b6b;--subtle:#737373;--hover:#9a9a9a;--line:#ececec;--underline:#ccc;--underline-hover:#ddd}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#111110;--fg:#ededec;--text:#c9c9c7;--muted:#9b9b99;--subtle:#7f7f7d;--hover:#6f6f6d;--line:#262625;--underline:#4a4a48;--underline-hover:#353534}}
 :root[data-theme=dark]{color-scheme:dark;--bg:#111110;--fg:#ededec;--text:#c9c9c7;--muted:#9b9b99;--subtle:#7f7f7d;--hover:#6f6f6d;--line:#262625;--underline:#4a4a48;--underline-hover:#353534}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -56,7 +56,10 @@ header .role{color:var(--muted)}
 .group .items>*+*{border-top:1px solid var(--line)}
 .row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;color:var(--fg);text-decoration:none}
 a.row:hover,.row .meta a:hover{color:var(--hover)}
-.row .meta{text-align:right}
+.row .title{display:flex;flex-direction:column;min-width:0}
+.row .desc{color:var(--muted);font-size:14px;line-height:1.5}
+.row .meta{text-align:right;flex-shrink:0}
+@media (max-width:480px){.group{grid-template-columns:1fr}.group .year{padding:12px 0 0;font-size:14px}.row{flex-direction:column;gap:2px}.row .meta{text-align:left;flex-shrink:1}}
 .row .meta a{color:inherit;text-decoration:none;white-space:nowrap}
 .row .sep{color:var(--hover)}
 .theme-toggle{display:grid;place-items:center;width:32px;height:32px;margin:-4px -6px 0 0;padding:0;border:0;border-radius:8px;background:none;color:var(--muted);cursor:pointer}
@@ -83,7 +86,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;pa
   </header>
 
   <section class="intro">
-    <p>Full Stack Developer and Co-Founder with 5+ years of experience building SaaS platforms and mobile apps with Node.js, Laravel and Vue/Nuxt. Currently building the backend for <a href="https://ustad.co/" target="_blank" rel="noopener">Ustad</a>, working on fintech and e‑invoice automation.</p>
+    <p>Co-Founder and developer with 5+ years of experience building SaaS platforms and mobile apps with Node.js, Laravel and Vue/Nuxt. Currently building the backend for <a href="https://ustad.co/" target="_blank" rel="noopener">Ustad</a>, working on fintech and e‑invoice automation.</p>
     <p>You can find me on <a href="https://x.com/erenbekman" target="_blank" rel="noopener">X</a>, <a href="https://github.com/erenbekman" target="_blank" rel="noopener">GitHub</a> and <a href="https://linkedin.com/in/erenbekman" target="_blank" rel="noopener">LinkedIn</a>, reach me via <a href="mailto:erenbekman@gmail.com">email</a>, or grab my <a href="Eren-Bekman-CV.pdf" download>CV</a>.</p>
   </section>
 
@@ -92,28 +95,28 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;pa
     <div class="group">
       <span class="year">2026</span>
       <div class="items">
-        <a class="row" href="https://subbrook.com/" target="_blank" rel="noopener"><span>Subbrook</span><span class="meta">subbrook.com&nbsp;↗</span></a>
-        <a class="row" href="https://github.com/erenbekman/harbor" target="_blank" rel="noopener"><span>Harbor</span><span class="meta">github.com&nbsp;↗</span></a>
-        <div class="row"><span>Upkept</span><span class="meta"><a href="https://up-kept.app/" target="_blank" rel="noopener">up-kept.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/upkept/id6794236887" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
-        <a class="row" href="https://apps.apple.com/us/app/expense-follower/id6761009175" target="_blank" rel="noopener"><span>Expense Follower</span><span class="meta">App Store&nbsp;↗</span></a>
+        <a class="row" href="https://subbrook.com/" target="_blank" rel="noopener"><span class="title">Subbrook<span class="desc">Local-first subscription tracker for desktop</span></span><span class="meta">subbrook.com&nbsp;↗</span></a>
+        <a class="row" href="https://github.com/erenbekman/harbor" target="_blank" rel="noopener"><span class="title">Harbor<span class="desc">Every project’s dev servers, one click away</span></span><span class="meta">github.com&nbsp;↗</span></a>
+        <div class="row"><span class="title">Upkept<span class="desc">Calm, judgment-free habit tracker</span></span><span class="meta"><a href="https://up-kept.app/" target="_blank" rel="noopener">up-kept.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/upkept/id6794236887" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
+        <a class="row" href="https://apps.apple.com/us/app/expense-follower/id6761009175" target="_blank" rel="noopener"><span class="title">Expense Follower<span class="desc">Shared expense tracker, built with a friend</span></span><span class="meta">App Store&nbsp;↗</span></a>
       </div>
     </div>
     <div class="group">
       <span class="year">2025</span>
       <div class="items">
-        <a class="row" href="https://ustad.co/" target="_blank" rel="noopener"><span>Ustad</span><span class="meta">ustad.co&nbsp;↗</span></a>
+        <a class="row" href="https://ustad.co/" target="_blank" rel="noopener"><span class="title">Ustad<span class="desc">E-invoice and financial automation platform</span></span><span class="meta">ustad.co&nbsp;↗</span></a>
       </div>
     </div>
     <div class="group">
       <span class="year">2023</span>
       <div class="items">
-        <div class="row"><span>Nott</span><span class="meta"><a href="https://nott.app/" target="_blank" rel="noopener">nott.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/nott-app/id6449980598" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
+        <div class="row"><span class="title">Nott<span class="desc">Note-sharing platform for students</span></span><span class="meta"><a href="https://nott.app/" target="_blank" rel="noopener">nott.app&nbsp;↗</a> <span class="sep">·</span> <a href="https://apps.apple.com/us/app/nott-app/id6449980598" target="_blank" rel="noopener">App Store&nbsp;↗</a></span></div>
       </div>
     </div>
     <div class="group">
       <span class="year">2021</span>
       <div class="items">
-        <a class="row" href="https://www.bluestacks.com/apps/educational/hexa-network-on-pc.html" target="_blank" rel="noopener"><span>Hexa Network</span><span class="meta">bluestacks.com&nbsp;↗</span></a>
+        <a class="row" href="https://www.bluestacks.com/apps/educational/hexa-network-on-pc.html" target="_blank" rel="noopener"><span class="title">Hexa Network<span class="desc">Admin panel and analytics at Lemoon Games</span></span><span class="meta">bluestacks.com&nbsp;↗</span></a>
       </div>
     </div>
   </section>
@@ -123,19 +126,19 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;pa
     <div class="group">
       <span class="year">2025–Now</span>
       <div class="items">
-        <div class="row"><span>Backend Developer</span><span class="meta">Ustad</span></div>
+        <div class="row"><span class="title">Backend Developer<span class="desc">Architecture, GİB and accounting integrations, billing</span></span><span class="meta">Ustad</span></div>
       </div>
     </div>
     <div class="group">
       <span class="year">2023–2025</span>
       <div class="items">
-        <div class="row"><span>Co-Founder &amp; Full Stack Developer</span><span class="meta">Nott</span></div>
+        <div class="row"><span class="title">Co-Founder &amp; Full Stack Developer<span class="desc">Took the app from idea to App Store and Google Play</span></span><span class="meta">Nott</span></div>
       </div>
     </div>
     <div class="group">
       <span class="year">2021–2023</span>
       <div class="items">
-        <div class="row"><span>Full Stack Developer</span><span class="meta">Lemoon&nbsp;Games</span></div>
+        <div class="row"><span class="title">Full Stack Developer<span class="desc">Admin dashboards for Hexa Network and Ms.Astro</span></span><span class="meta">Lemoon&nbsp;Games</span></div>
       </div>
     </div>
   </section>
